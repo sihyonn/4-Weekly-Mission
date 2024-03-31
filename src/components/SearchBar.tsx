@@ -1,12 +1,11 @@
 import { useRef } from 'react';
-
+import { useRouter } from 'next/router';
 import { styled } from 'styled-components';
 
 import IconButton from '@/components/common/button/IconButton';
-import { ReactComponent as SearchIcon } from 'assets/icon/search.svg';
-import closeIcon from 'assets/icon/close-icon.svg';
+import SearchIcon from '@/assets/icon/search.svg';
+import closeIcon from '@/assets/icon/close-icon.svg';
 import handleEnterKeyDown from '@/utils/handleEnterKeyDown';
-import { useRouter } from 'next/router';
 
 const Styled = {
   Container: styled.div`

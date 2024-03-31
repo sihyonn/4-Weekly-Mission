@@ -1,7 +1,6 @@
 import { styled } from 'styled-components';
-
 import { UserInfoData } from '@/interfaces/dataInterface';
-import defaultProfileImg from 'assets/profileImg.svg';
+import defaultProfileImg from '@/assets/image/defaultCardImg.svg';
 
 const Styled = {
   UserBtn: styled.button`

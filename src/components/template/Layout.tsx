@@ -1,9 +1,9 @@
+import { usePathname } from 'next/navigation';
 import { styled } from 'styled-components';
 
 import GNB from '@/components/common/gnb/GNB';
 import Footer from '@/components/common/footer/Footer';
 import { Children } from '@/interfaces/componentsInterface';
-import { usePathname } from 'next/navigation';
 
 const Styled = {
   Body: styled.div`

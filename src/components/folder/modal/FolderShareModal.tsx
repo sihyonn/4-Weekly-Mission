@@ -6,9 +6,9 @@ import BackdropModal from '@/components/common/modal/BackdropModal';
 
 import useKakaoShare from '@/hooks/useKakaoShare';
 import copyToClipboard from '@/utils/copyToClipboard';
-import kakaoIcon from 'assets/icon/kakao-icon.svg';
-import facebookIcon from 'assets/icon/facebook-icon.svg';
-import linkShareIcon from 'assets/icon/linkShare-icon.svg';
+import kakaoIcon from '@/assets/icon/kakao-icon.svg';
+import facebookIcon from '@/assets/icon/facebook-icon.svg';
+import linkShareIcon from '@/assets/icon/linkShare-icon.svg';
 
 const Styled = {
   Title: styled.span`

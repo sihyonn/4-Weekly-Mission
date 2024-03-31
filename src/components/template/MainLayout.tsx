@@ -1,5 +1,4 @@
 import { styled } from 'styled-components';
-
 import { Children } from '@/interfaces/componentsInterface';
 
 const Styled = {

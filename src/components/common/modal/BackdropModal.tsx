@@ -3,7 +3,7 @@ import { styled } from 'styled-components';
 import Portal from '@/components/common/modal/Portal';
 import IconButton from '@/components/common/button/IconButton';
 import { Children } from '@/interfaces/componentsInterface';
-import closeIcon from 'assets/icon/close-icon.svg';
+import closeIcon from '@/assets/icon/close-icon.svg';
 
 const Styled = {
   Backdrop: styled.div`

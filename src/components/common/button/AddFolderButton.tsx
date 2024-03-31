@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { styled } from 'styled-components';
 
-import addIcon from 'assets/icon/add-icon.svg';
+import AddIcon from '@/assets/icon/add-icon.svg';
 import InputFormModal from '@/components/folder/modal/InputFormModal';
 
 const Styled = {
@@ -44,7 +44,7 @@ function AddFolderButton() {
     <>
       <Styled.Button type="button" onClick={handleButtonClick}>
         <Styled.Label>폴더추가</Styled.Label>
-        <Styled.Icon src={addIcon} alt="폴더추가 버튼" />
+        <AddIcon />
       </Styled.Button>
       {isModalOpen && (
         <InputFormModal

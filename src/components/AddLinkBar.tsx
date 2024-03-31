@@ -1,7 +1,7 @@
 import { useState, ChangeEvent } from 'react';
 import { styled } from 'styled-components';
 
-import linkBarIcon from 'assets/icon/linkBar.svg';
+import LinkBarIcon from '@/assets/icon/linkBar.svg';
 import Button from '@/components/common/button/Button';
 import AddToFolderModal from '@/components/folder/modal/AddToFolderModal';
 
@@ -62,7 +62,7 @@ function AddLinkBar({ style, placeholder }: AddLinkBarProps) {
   return (
     <>
       <Styled.Container style={style}>
-        <img src={linkBarIcon} alt="링크 추가 바 아이콘" />
+        <LinkBarIcon />
         <Styled.Input type="text" value={inputValue} placeholder={placeholder} onChange={handleChange} />
         <Button onClick={handleButtonClick} style={{ padding: '1rem 1.6rem' }}>
           추가하기

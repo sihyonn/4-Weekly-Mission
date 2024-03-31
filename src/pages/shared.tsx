@@ -12,6 +12,7 @@ import useSampleFolderQuery from '@/hooks/api/folder/useSampleFolderQuery';
 import filterDataBySearchKeyword from '@/utils/filterDataBySearchKeyword';
 import PLACEHOLDER from '@/constants/FORM_MESSAGE';
 import { GridTemplate } from '@/styles/commonStyles';
+import Layout from '@/components/template/Layout';
 
 const Styled = {
   SearchResult: styled.div`
@@ -66,7 +67,7 @@ function Shared() {
   const hasFilteredLinks = filteredLinks.length !== 0;
 
   return (
-    <>
+    <Layout>
       <PageTitle title="링크 공유" />
       <ShareHeader folderData={folderData} />
       <MainLayout>
@@ -96,7 +97,7 @@ function Shared() {
           </Styled.Cards>
         )}
       </MainLayout>
-    </>
+    </Layout>
   );
 }
 

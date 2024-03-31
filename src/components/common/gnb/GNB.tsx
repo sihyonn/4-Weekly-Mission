@@ -1,10 +1,10 @@
+import Link from 'next/link';
 import { styled } from 'styled-components';
 
 import Button from '@/components/common/button/Button';
 import UserBtn from '@/components/common/gnb/UserBtn';
 import useUserInfoQuery from '@/hooks/api/user/useUserInfoQuery';
-import logo from 'assets/logo.svg';
-import Link from 'next/link';
+import Logo from '@/assets/logo.svg';
 
 const Styled = {
   Container: styled.nav<{ $isFixed: boolean }>`
@@ -47,7 +47,7 @@ function GNB({ $isFixed }: GnbProps) {
     <Styled.Container $isFixed={$isFixed}>
       <Styled.InnerWrap>
         <Link href="/">
-          <img src={logo} alt="linkbrary-logo" />
+          <Logo />
         </Link>
         {isLoggedIn ? (
           <UserBtn userData={userData} />

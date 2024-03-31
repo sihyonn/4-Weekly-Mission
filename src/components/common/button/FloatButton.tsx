@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { styled } from 'styled-components';
-import addIcon from 'assets/icon/add.svg';
+
 import InputFormModal from '@/components/folder/modal/InputFormModal';
+import AddIcon from '@/assets/icon/add.svg';
 import { Children } from '@/interfaces/componentsInterface';
 
 const Styled = {
@@ -30,11 +31,6 @@ const Styled = {
       display: none;
     }
   `,
-
-  Icon: styled.img`
-    width: 1.6rem;
-    height: 1.6rem;
-  `,
 };
 
 interface FloatButtonProps extends Children {}
@@ -55,7 +51,7 @@ function FloatButton({ children, ...htmlButtonProps }: FloatButtonProps) {
     <>
       <Styled.Button type="button" onClick={handleButtonClick} {...htmlButtonProps}>
         <div>{children}</div>
-        <Styled.Icon src={addIcon} alt="플로팅 버튼" />
+        <AddIcon />
       </Styled.Button>
       {isModalOpen && (
         <InputFormModal

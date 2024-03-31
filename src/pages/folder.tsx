@@ -16,6 +16,7 @@ import FixedLinkBar from '@/components/folder/FixedLinkBar';
 import useUserFoldersQuery from '@/hooks/api/folder/useUserFoldersQuery';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import PLACEHOLDER from '@/constants/FORM_MESSAGE';
+import Layout from '@/components/template/Layout';
 
 const Styled = {
   NoLink: styled.div`
@@ -98,7 +99,7 @@ function Folder() {
   });
 
   return (
-    <>
+    <Layout>
       <PageTitle title="폴더" />
       <div ref={headerTargetRef}>
         <FolderHeader />
@@ -138,7 +139,7 @@ function Folder() {
         )}
       </MainLayout>
       <div ref={footerTargetRef}></div>
-    </>
+    </Layout>
   );
 }
 

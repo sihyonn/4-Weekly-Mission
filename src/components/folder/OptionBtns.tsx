@@ -6,9 +6,9 @@ import FolderShareModal from '@/components/folder/modal/FolderShareModal';
 import InputFormModal from '@/components/folder/modal/InputFormModal';
 import DeleteItemModal from '@/components/folder/modal/DeleteItemModal';
 
-import shareIcon from 'assets/icon/share-icon.svg';
-import strokeIcon from 'assets/icon/stroke-icon.svg';
-import deleteIcon from 'assets/icon/delete-icon.svg';
+import shareIcon from '@/assets/icon/share-icon.svg';
+import strokeIcon from '@/assets/icon/stroke-icon.svg';
+import deleteIcon from '@/assets/icon/delete-icon.svg';
 
 const Styled = {
   Container: styled.div`

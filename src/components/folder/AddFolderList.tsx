@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { styled } from 'styled-components';
 
-import checkIcon from 'assets/icon/check-icon.svg';
+import checkIcon from '@/assets/icon/check-icon.svg';
 
 const Styled = {
   FolderList: styled.ul`

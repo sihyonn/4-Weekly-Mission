@@ -1,8 +1,8 @@
 import { HTMLAttributes } from 'react';
 import { styled } from 'styled-components';
 
-import filledStar from 'assets/icon/filledStar.svg';
-import emptystar from 'assets/icon/emptyStar.svg';
+import filledStar from '@/assets/icon/filledStar.svg';
+import emptystar from '@/assets/icon/emptyStar.svg';
 
 const Styled = {
   Container: styled.button`

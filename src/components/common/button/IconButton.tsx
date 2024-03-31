@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { HTMLAttributes } from 'react';
 import { styled } from 'styled-components';
 
@@ -27,7 +28,7 @@ interface IconButtonProps extends HTMLAttributes<HTMLButtonElement> {
 function IconButton({ icon, ...htmlButtonProps }: IconButtonProps) {
   return (
     <Styled.Container as="button" {...htmlButtonProps}>
-      <img src={icon} alt={icon} />
+      <Image src={icon} alt={icon} />
     </Styled.Container>
   );
 }

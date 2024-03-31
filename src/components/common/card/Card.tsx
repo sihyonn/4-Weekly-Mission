@@ -5,7 +5,8 @@ import StarButton from '@/components/common/card/StarButton';
 import MeatBallButton from '@/components/common/card/MeatBallButton';
 import calculateTimeDifference from '@/utils/calculateTimeDifference';
 import formatDateToYYYYMMDD from '@/utils/formatDateToYYYYMMDD';
-import defaultCardImg from 'assets/defaultCardImg.svg';
+import defaultCardImg from '@/assets/image/defaultCardImg.svg';
+import Image from 'next/image';
 
 const Styled = {
   Container: styled.div`
@@ -26,7 +27,7 @@ const Styled = {
     overflow: hidden;
   `,
 
-  ThumbnailImg: styled.img`
+  ThumbnailImg: styled(Image)`
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -90,7 +91,7 @@ function Card({ createdAt, url, description, imageSource }: CardProps) {
           }}
         />
         <Styled.ThumbnailContainer>
-          <Styled.ThumbnailImg src={source} alt="카드 이미지" />
+          <Styled.ThumbnailImg src={source} alt="카드 이미지" width={100} height={100} />
         </Styled.ThumbnailContainer>
         <Styled.TextCardInfo>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>

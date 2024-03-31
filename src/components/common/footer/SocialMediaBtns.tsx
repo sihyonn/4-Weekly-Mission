@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { styled } from 'styled-components';
 
-import faceboockIcon from 'assets/icon/facebook-icon.svg';
-import twitterIcon from 'assets/icon/twitter-icon.svg';
-import youtubeIcon from 'assets/icon/youtube-icon.svg';
-import instagramIcon from 'assets/icon/instagram-icon.svg';
+import faceboockIcon from '@/assets/icon/facebook-icon.svg';
+import twitterIcon from '@/assets/icon/twitter-icon.svg';
+import youtubeIcon from '@/assets/icon/youtube-icon.svg';
+import instagramIcon from '@/assets/icon/instagram-icon.svg';
+import Image from 'next/image';
 
 const Styled = {
   Container: styled.div`
@@ -31,7 +32,7 @@ function SocialMediaBtns({ ...htmlDivProps }) {
     <Styled.Container {...htmlDivProps}>
       {socialMediaData.map(({ name, url, icon }, idx) => (
         <Styled.Icon key={idx} href={url} target="_blank" rel="noopener noreferrer">
-          <img src={icon} alt={name} />
+          <Image src={icon} alt={name} width={20} height={20} />
         </Styled.Icon>
       ))}
     </Styled.Container>

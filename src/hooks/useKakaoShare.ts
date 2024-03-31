@@ -11,7 +11,7 @@ const useKakaoShare = (selectedFolderId: string, url: string) => {
 
   useEffect(() => {
     kakao.cleanup();
-    kakao.init(process.env.REACT_APP_KAKAO_KEY);
+    kakao.init(process.env.NEXT_PUBLIC_KAKAO_KEY);
   }, []);
 
   const shareKakao = () => {

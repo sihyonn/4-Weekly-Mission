@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = process.env.REACT_APP_LINKBRARY_BaseURL;
+const baseURL = process.env.NEXT_PUBLIC_LINKBRARY_BaseURL;
 
 const instance = axios.create({
   baseURL: baseURL,

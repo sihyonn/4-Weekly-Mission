@@ -1,4 +1,4 @@
-import TIME from 'constants/TIME';
+import TIME from '@/constants/TIME';
 
 const calculateTimeDifference = (time: string) => {
   const formatTimeUnit = (value: number, unit: string) => {

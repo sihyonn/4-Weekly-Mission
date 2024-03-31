@@ -1,4 +1,4 @@
-import { Link, UserLinksData } from 'interfaces/dataInterface';
+import { Link, UserLinksData } from '@/interfaces/dataInterface';
 
 type Keyword = string | null;
 

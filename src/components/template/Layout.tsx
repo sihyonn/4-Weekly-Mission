@@ -1,9 +1,9 @@
-import { useRouter } from 'next/router';
 import { styled } from 'styled-components';
 
 import GNB from '@/components/common/gnb/GNB';
 import Footer from '@/components/common/footer/Footer';
 import { Children } from '@/interfaces/componentsInterface';
+import { usePathname } from 'next/navigation';
 
 const Styled = {
   Body: styled.div`
@@ -21,8 +21,8 @@ const Styled = {
 interface LayoutProps extends Children {}
 
 function Layout({ children }: LayoutProps) {
-  const router = useRouter();
-  const isFixed = router.pathname !== '/folder';
+  const pathname = usePathname();
+  const isFixed = pathname !== '/folder';
 
   return (
     <>

@@ -5,8 +5,7 @@ import DeleteItemModal from '@/components/folder/modal/DeleteItemModal';
 import AddToFolderModal from '@/components/folder/modal/AddToFolderModal';
 import useOutSideClick from '@/hooks/useOutSideClick';
 import BUTTON_TYPE from '@/constants/BUTTON_TYPE';
-import meatballIcon from '@/assets/icon/meatballsIcon.svg';
-import Image from 'next/image';
+import MeatballIcon from '@/assets/icon/meatballsIcon.svg';
 
 const Styled = {
   Container: styled.button`
@@ -69,7 +68,7 @@ function MeatBallButton() {
           setIsPopoverOpen(true);
         }}
       >
-        <Image src={meatballIcon} alt="더보기 버튼" />
+        <MeatballIcon />
 
         {isPopoverOpen && (
           <Styled.Popover>

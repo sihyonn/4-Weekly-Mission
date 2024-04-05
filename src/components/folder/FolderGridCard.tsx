@@ -24,8 +24,7 @@ interface FolderGridCardProps {
 }
 
 function FolderGridCard({ selectedFolder, keyword }: FolderGridCardProps) {
-  let queryHook;
-  selectedFolder === 1 ? (queryHook = useUserLinksQuery) : (queryHook = useUserSpecipicLinkQuery);
+  const queryHook = selectedFolder === 1 ? useUserLinksQuery : useUserSpecipicLinkQuery;
 
   const { data } = queryHook({ userId: 1, folderId: selectedFolder });
   const folderData: UserLinksData[] = data?.data?.data || [];

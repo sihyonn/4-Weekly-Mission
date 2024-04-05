@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react';
+import { ButtonHTMLAttributes } from 'react';
 import { styled } from 'styled-components';
 import BUTTON_TYPE from '@/constants/BUTTON_TYPE';
 
@@ -15,10 +15,9 @@ const Styled = {
   `,
 };
 
-interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   styleType?: string;
-  type?: 'button' | 'submit' | 'reset' | undefined;
 }
 
 /**

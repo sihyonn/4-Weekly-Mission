@@ -38,7 +38,7 @@ function UserBtn({ userData }: { userData: UserInfoData }) {
   return (
     <Styled.UserBtn>
       <Styled.ProfileImgContainer>
-        <Styled.ProfileImg src={profileImg} alt="profileImg" />
+        <Styled.ProfileImg src={profileImg} alt="유저 프로필 이미지" />
       </Styled.ProfileImgContainer>
       <Styled.ProfileUserName>{email}</Styled.ProfileUserName>
     </Styled.UserBtn>

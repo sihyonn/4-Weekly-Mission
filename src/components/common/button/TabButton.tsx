@@ -5,8 +5,7 @@ const Styled = {
   Container: styled.ul`
     display: flex;
     align-items: center;
-    flex-wrap: wrap; // 모바일에서 자동 줄바꿈 되도록
-    /* min-width: 70%; */
+    flex-wrap: wrap;
   `,
 
   Tab: styled.li`
@@ -40,13 +39,11 @@ const Styled = {
  * @param {React.HTMLAttributes} htmlButtonProps 기타 탭 버튼 container props
  */
 
-interface TabInfo {
-  name: string;
-  id: number;
-}
-
 interface TabButtonProps {
-  tabInfo: TabInfo[];
+  tabInfo: {
+    name: string;
+    id: number;
+  }[];
   onChange: (name: string, id: number) => void;
 }
 

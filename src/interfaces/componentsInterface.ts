@@ -17,6 +17,10 @@ export interface ValidationRule {
     value: number;
     message: string;
   };
+  minLength: {
+    value: number;
+    message: string;
+  };
 }
 
 export interface InputInfo {
@@ -24,7 +28,7 @@ export interface InputInfo {
   label: string;
   type: string;
   placeholder: string;
-  validation?: ValidationRule;
+  validation?: Partial<ValidationRule>;
   errorMsg?: string;
   requireMsg?: string;
 }

@@ -1,6 +1,9 @@
-export const SIGN_IN = Object.freeze([
+import { InputInfo } from '@/interfaces/componentsInterface';
+
+export const SIGN_IN = Object.freeze<InputInfo[]>([
   {
     id: 'email',
+    label: '이메일',
     type: 'text',
     placeholder: '이메일을 입력해 주세요.',
     validation: {
@@ -14,6 +17,7 @@ export const SIGN_IN = Object.freeze([
   {
     id: 'password',
     type: 'password',
+    label: '비밀번호',
     placeholder: '비밀번호를 입력해 주세요.',
     validation: {
       required: '비밀번호를 입력해 주세요.',

@@ -15,7 +15,7 @@ const Styled = {
 interface FormProps {
   onSubmit: SubmitHandler<any>;
   onError?: SubmitErrorHandler<any>;
-  inputInfo: InputInfo[];
+  inputInfo: Readonly<InputInfo[]>;
   defaultValues: Record<string, any>;
   children?: ReactNode;
 }

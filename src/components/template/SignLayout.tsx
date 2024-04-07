@@ -4,7 +4,6 @@ import { Children } from '@/interfaces/componentsInterface';
 const Styled = {
   Container: styled.div`
     width: 100%;
-    height: 100vh;
 
     padding-top: 23.8rem;
 

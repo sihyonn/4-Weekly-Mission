@@ -36,7 +36,9 @@ function signup() {
           inputInfo={FORM_INFO.SIGN_UP}
           defaultValues={FORM_DEFAULT.SIGN_UP}
         >
-          <Button style={{ width: '100%', marginTop: '1.3rem' }}>회원가입</Button>
+          <Button type="submit" style={{ width: '100%', marginTop: '1.3rem' }}>
+            회원가입
+          </Button>
         </Form>
       </Styled.NormalSign>
       <Styled.SocialSign>

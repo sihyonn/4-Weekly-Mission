@@ -36,7 +36,9 @@ function signin() {
           inputInfo={FORM_INFO.SIGN_IN}
           defaultValues={FORM_DEFAULT.SIGN_IN}
         >
-          <Button style={{ width: '100%', marginTop: '1.3rem' }}>로그인</Button>
+          <Button type="submit" style={{ width: '100%', marginTop: '1.3rem' }}>
+            로그인
+          </Button>
         </Form>
       </Styled.NormalSign>
       <Styled.SocialSign>

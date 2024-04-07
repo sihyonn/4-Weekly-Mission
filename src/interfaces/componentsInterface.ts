@@ -21,6 +21,7 @@ export interface ValidationRule {
     value: number;
     message: string;
   };
+  validate?: (value: string, { password }: { password: string }) => true | string;
 }
 
 export interface InputInfo {

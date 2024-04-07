@@ -66,7 +66,8 @@ const SIGN_UP = Object.freeze<InputInfo[]>([
     label: '비밀번호 확인',
     placeholder: '비밀번호와 일치하는 값을 입력해 주세요.',
     validation: {
-      required: '비밀번호가 일치하지 않아요.',
+      required: '비밀번호를 다시 입력해주세요.',
+      validate: (value, { password }) => value === password || '비밀번호가 일치하지 않아요.',
     },
   },
 ]);

@@ -1,6 +1,6 @@
 import { InputInfo } from '@/interfaces/componentsInterface';
 
-export const SIGN_IN = Object.freeze<InputInfo[]>([
+const SIGN_IN = Object.freeze<InputInfo[]>([
   {
     id: 'email',
     label: '이메일',
@@ -30,3 +30,5 @@ export const SIGN_IN = Object.freeze<InputInfo[]>([
     },
   },
 ]);
+
+export default { SIGN_IN };

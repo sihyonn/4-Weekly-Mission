@@ -3,4 +3,10 @@ const SIGN_IN = {
   password: '',
 };
 
-export default { SIGN_IN };
+const SIGN_UP = {
+  email: '',
+  password: '',
+  password_check: '',
+};
+
+export default { SIGN_IN, SIGN_UP };

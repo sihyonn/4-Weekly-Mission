@@ -8,6 +8,7 @@ import SignLayout from '@/components/template/SignLayout';
 
 import FORM_INFO from '@/constants/FORM_INFO';
 import FORM_DEFAULT from '@/constants/FORM_DEFAULT';
+import useSignUpMutation from '@/hooks/api/auth/useSignUpMutation';
 
 const Styled = {
   NormalSign: styled.section`
@@ -25,13 +26,15 @@ const Styled = {
 };
 
 function signup() {
+  const { mutate } = useSignUpMutation();
+
   return (
     <SignLayout>
       <Styled.NormalSign>
         <SignTitle page="signup" />
         <Form
-          onSubmit={() => {
-            console.log('제출');
+          onSubmit={(data) => {
+            mutate({ email: data.email, password: data.password });
           }}
           inputInfo={FORM_INFO.SIGN_UP}
           defaultValues={FORM_DEFAULT.SIGN_UP}

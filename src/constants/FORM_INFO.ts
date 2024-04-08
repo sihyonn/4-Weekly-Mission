@@ -1,3 +1,5 @@
+import { AxiosError } from 'axios';
+import authAPI from '@/api/authAPI';
 import { InputInfo } from '@/interfaces/componentsInterface';
 
 const SIGN_IN = Object.freeze<InputInfo[]>([
@@ -43,6 +45,16 @@ const SIGN_UP = Object.freeze<InputInfo[]>([
         value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
         message: '올바른 이메일 주소가 아닙니다',
       },
+      validate: {
+        isDuplicateEmail: async (value) => {
+          try {
+            await authAPI.isEmailDuplicate({ email: value });
+          } catch (e) {
+            if (e instanceof AxiosError && e.response?.data.error.message === '이미 존재하는 이메일입니다.')
+              return '이미 사용 중인 이메일입니다.';
+          }
+        },
+      },
     },
   },
   {
@@ -67,7 +79,9 @@ const SIGN_UP = Object.freeze<InputInfo[]>([
     placeholder: '비밀번호와 일치하는 값을 입력해 주세요.',
     validation: {
       required: '비밀번호를 다시 입력해주세요.',
-      validate: (value, { password }) => value === password || '비밀번호가 일치하지 않아요.',
+      validate: {
+        isMatchPassword: (value, { password }) => value === password || '비밀번호가 일치하지 않아요.',
+      },
     },
   },
 ]);

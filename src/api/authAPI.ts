@@ -24,4 +24,15 @@ const postSignUp = async ({ email, password }: LoginForm) => {
   });
 };
 
-export default { isEmailDuplicate, postSignUp };
+/**
+ * 로그인 요청 api
+ */
+const postSignIn = async ({ email, password }: LoginForm) => {
+  return await instance({
+    url: API.AUTH.SIGN_IN,
+    method: 'POST',
+    data: { email, password },
+  });
+};
+
+export default { isEmailDuplicate, postSignUp, postSignIn };

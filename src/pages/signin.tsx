@@ -8,6 +8,7 @@ import SocialMediaSign from '@/components/sign/SocialMediaSign';
 
 import FORM_INFO from '@/constants/FORM_INFO';
 import FORM_DEFAULT from '@/constants/FORM_DEFAULT';
+import useSignInMutation from '@/hooks/api/auth/useSignInMutation';
 
 const Styled = {
   NormalSign: styled.section`
@@ -25,13 +26,14 @@ const Styled = {
 };
 
 function signin() {
+  const { mutate } = useSignInMutation();
   return (
     <SignLayout>
       <Styled.NormalSign>
         <SignTitle page="signin" />
         <Form
-          onSubmit={() => {
-            console.log('제출');
+          onSubmit={(data) => {
+            mutate({ email: data.email, password: data.password });
           }}
           inputInfo={FORM_INFO.SIGN_IN}
           defaultValues={FORM_DEFAULT.SIGN_IN}

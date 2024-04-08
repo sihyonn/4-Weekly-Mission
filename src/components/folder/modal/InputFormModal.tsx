@@ -3,7 +3,7 @@ import { styled } from 'styled-components';
 
 import Button from '@/components/common/button/Button';
 import BackdropModal from '@/components/common/modal/BackdropModal';
-import PLACEHOLDER from '@/constants/FORM_MESSAGE';
+import { PLACEHOLDER } from '@/constants/FORM_MESSAGE';
 
 const Styled = {
   Title: styled.span`

@@ -7,12 +7,12 @@ import ShareHeader from '@/components/share/ShareHeader';
 import MainLayout from '@/components/template/MainLayout';
 import SearchBar from '@/components/SearchBar';
 import Card from '@/components/common/card/Card';
+import Layout from '@/components/template/Layout';
 
+import { PLACEHOLDER } from '@/constants/FORM_MESSAGE';
 import useSampleFolderQuery from '@/hooks/api/folder/useSampleFolderQuery';
 import filterDataBySearchKeyword from '@/utils/filterDataBySearchKeyword';
-import PLACEHOLDER from '@/constants/FORM_MESSAGE';
 import { GridTemplate } from '@/styles/commonStyles';
-import Layout from '@/components/template/Layout';
 
 const Styled = {
   SearchResult: styled.div`

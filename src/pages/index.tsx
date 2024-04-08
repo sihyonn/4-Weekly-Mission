@@ -1,10 +1,9 @@
 import { useRouter } from 'next/router';
+
 import Button from '@/components/common/button/Button';
 import MainLayout from '@/components/template/MainLayout';
-import routes from '@/constants/routes';
-import Form from '@/components/common/form/Form';
 import Layout from '@/components/template/Layout';
-import { SIGN_IN } from '@/constants/FORM_INFO';
+import routes from '@/constants/routes';
 
 export default function Home() {
   const router = useRouter();
@@ -26,13 +25,6 @@ export default function Home() {
             공유페이지 바로가기
           </Button>
           <Button onClick={goToFoldersPage}>폴더페이지 바로가기</Button>
-          <Form
-            onSubmit={() => {
-              console.log('제출');
-            }}
-            inputInfo={SIGN_IN}
-            defaultValues={{ nickname: '' }}
-          />
         </div>
       </MainLayout>
     </Layout>

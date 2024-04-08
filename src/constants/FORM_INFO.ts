@@ -48,7 +48,7 @@ const SIGN_UP = Object.freeze<InputInfo[]>([
       validate: {
         isDuplicateEmail: async (value) => {
           try {
-            await authAPI.isEmailDuplicate({ email: value });
+            await authAPI.isEmailDuplicate(value);
           } catch (e) {
             if (e instanceof AxiosError && e.response?.data.error.message === '이미 존재하는 이메일입니다.')
               return '이미 사용 중인 이메일입니다.';

@@ -9,6 +9,7 @@ import SignLayout from '@/components/template/SignLayout';
 import FORM_INFO from '@/constants/FORM_INFO';
 import FORM_DEFAULT from '@/constants/FORM_DEFAULT';
 import useSignUpMutation from '@/hooks/api/auth/useSignUpMutation';
+import useAuthRedirect from '@/hooks/useAuthRedirect';
 
 const Styled = {
   NormalSign: styled.section`
@@ -26,6 +27,7 @@ const Styled = {
 };
 
 function signup() {
+  useAuthRedirect();
   const { mutate } = useSignUpMutation();
 
   return (

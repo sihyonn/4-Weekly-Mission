@@ -9,6 +9,7 @@ import SocialMediaSign from '@/components/sign/SocialMediaSign';
 import FORM_INFO from '@/constants/FORM_INFO';
 import FORM_DEFAULT from '@/constants/FORM_DEFAULT';
 import useSignInMutation from '@/hooks/api/auth/useSignInMutation';
+import useAuthRedirect from '@/hooks/useAuthRedirect';
 
 const Styled = {
   NormalSign: styled.section`
@@ -26,7 +27,9 @@ const Styled = {
 };
 
 function signin() {
+  useAuthRedirect();
   const { mutate } = useSignInMutation();
+
   return (
     <SignLayout>
       <Styled.NormalSign>

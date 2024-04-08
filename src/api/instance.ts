@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from 'react-hot-toast';
 
 const baseURL = process.env.NEXT_PUBLIC_LINKBRARY_BaseURL;
 
@@ -24,10 +25,15 @@ instance.interceptors.request.use(
 
 instance.interceptors.response.use(
   (response) => {
+    const accessToken = response.data.data.accessToken;
+
+    if (accessToken) {
+      localStorage.setItem('accessToken', accessToken);
+    }
+
     return response;
   },
   (error) => {
-    alert(`‼️[ERROR] ${error.response.data.message} `);
     return Promise.reject(error);
   }
 );

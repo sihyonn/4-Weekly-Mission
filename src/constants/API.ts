@@ -26,4 +26,11 @@ const LINK = Object.freeze({
     return `/users/${userId}/links?folderId=${folderId}`;
   },
 });
-export default { SAMPLE, USER, FOLDER, LINK };
+
+const AUTH = Object.freeze({
+  SIGN_IN: '/sign-in',
+  SIGN_UP: '/sign-up',
+  EMAIL_DUPLICATE: '/check-email',
+});
+
+export default { SAMPLE, USER, FOLDER, LINK, AUTH };

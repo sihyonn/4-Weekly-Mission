@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { styled } from 'styled-components';
 
+import Layout from '@/components/template/Layout';
 import PageTitle from '@/components/common/PageTitle';
 import FolderHeader from '@/components/folder/FolderHeader';
 import MainLayout from '@/components/template/MainLayout';
@@ -13,10 +14,9 @@ import FloatButton from '@/components/common/button/FloatButton';
 import SearchBar from '@/components/SearchBar';
 import FixedLinkBar from '@/components/folder/FixedLinkBar';
 
+import { PLACEHOLDER } from '@/constants/FORM_MESSAGE';
 import useUserFoldersQuery from '@/hooks/api/folder/useUserFoldersQuery';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
-import PLACEHOLDER from '@/constants/FORM_MESSAGE';
-import Layout from '@/components/template/Layout';
 
 const Styled = {
   NoLink: styled.div`

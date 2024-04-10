@@ -7,6 +7,7 @@ export interface Children {
 /**
  * Form, Input 관련 인터페이스
  */
+
 export interface ValidationRule {
   required: string;
   pattern: {
@@ -17,6 +18,13 @@ export interface ValidationRule {
     value: number;
     message: string;
   };
+  minLength: {
+    value: number;
+    message: string;
+  };
+  validate?: {
+    [key: string]: (value: any, data?: any) => string | void | boolean | Promise<string | void>;
+  };
 }
 
 export interface InputInfo {
@@ -24,7 +32,7 @@ export interface InputInfo {
   label: string;
   type: string;
   placeholder: string;
-  validation?: ValidationRule;
+  validation?: Partial<ValidationRule>;
   errorMsg?: string;
   requireMsg?: string;
 }

@@ -15,7 +15,7 @@ const Styled = {
 interface FormProps {
   onSubmit: SubmitHandler<any>;
   onError?: SubmitErrorHandler<any>;
-  inputInfo: InputInfo[];
+  inputInfo: Readonly<InputInfo[]>;
   defaultValues: Record<string, any>;
   children?: ReactNode;
 }
@@ -32,7 +32,7 @@ function Form({ onSubmit, onError, inputInfo, defaultValues, children }: FormPro
   return (
     <FormProvider {...methods}>
       <Styled.Form onSubmit={handleSubmit(onSubmit, onError)}>
-        {inputInfo.map((input) => (
+        {inputInfo?.map((input) => (
           <LabeledInput
             key={input.id}
             id={input.id}

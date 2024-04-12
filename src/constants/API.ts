@@ -7,7 +7,7 @@ const SAMPLE = Object.freeze({
 });
 
 const USER = Object.freeze({
-  DETAIL: (userId: UserId) => {
+  BY_ID: (userId: UserId) => {
     return `/users/${userId}`;
   },
 });

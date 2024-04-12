@@ -9,7 +9,7 @@ interface UserQueryParams {
 
 function useUserInfoQuery({ userId }: UserQueryParams) {
   return useQuery({
-    queryKey: [API.USER.DETAIL(userId)],
+    queryKey: [API.USER.BY_ID(userId)],
     queryFn: async () => {
       return await userAPI.getUserInfo(userId);
     },

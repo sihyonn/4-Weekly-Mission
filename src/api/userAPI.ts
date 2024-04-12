@@ -6,7 +6,7 @@ import API from '@/constants/API';
  */
 const getUserInfo = (userId: number) => {
   return instance({
-    url: API.USER.DETAIL(userId),
+    url: API.USER.BY_ID(userId),
     method: 'GET',
   });
 };

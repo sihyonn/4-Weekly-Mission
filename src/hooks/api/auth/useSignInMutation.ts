@@ -3,7 +3,7 @@ import { toast } from 'react-hot-toast';
 import { useMutation } from '@tanstack/react-query';
 
 import routes from '@/constants/routes';
-import authAPI from '@/api/authAPI';
+import authAPI from '@/api/auth.api';
 import { LoginForm } from '@/interfaces/componentsInterface';
 
 function useSignInMutation() {

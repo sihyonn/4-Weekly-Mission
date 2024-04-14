@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 
-import linkAPI from '@/api/linkAPI';
+import linkAPI from '@/api/link.api';
 import API from '@/constants/API';
 
 interface UserQueryParams {

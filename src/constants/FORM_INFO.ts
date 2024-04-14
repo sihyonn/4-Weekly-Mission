@@ -1,5 +1,5 @@
 import { AxiosError } from 'axios';
-import authAPI from '@/api/authAPI';
+import authAPI from '@/api/auth.api';
 import { InputInfo } from '@/interfaces/componentsInterface';
 
 const SIGN_IN = Object.freeze<InputInfo[]>([

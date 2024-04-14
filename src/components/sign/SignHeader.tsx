@@ -23,10 +23,11 @@ const Styled = {
 };
 
 /**
- * SignTitle - 메인로고와 가입 및 로그인유도 메시지를 포함한 타이틀
+ * SignHeader
+ * @description 메인로고와 가입 및 로그인유도 메시지를 포함한 타이틀
  */
 
-function SignTitle({ page }: { page: string }) {
+function SignHeader({ page }: { page: string }) {
   const pageInfo = page === 'signin' ? SIGNIN_TITLE : SIGNUP_TITLE;
 
   return (
@@ -42,4 +43,4 @@ function SignTitle({ page }: { page: string }) {
   );
 }
 
-export default SignTitle;
+export default SignHeader;

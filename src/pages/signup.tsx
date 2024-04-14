@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 
 import Button from '@/components/common/button/Button';
 import Form from '@/components/common/form/Form';
-import SignTitle from '@/components/sign/SignTitle';
+import SignHeader from '@/components/sign/SignHeader';
 import SocialMediaSign from '@/components/sign/SocialMediaSign';
 import SignLayout from '@/components/template/SignLayout';
 
@@ -33,7 +33,7 @@ function signup() {
   return (
     <SignLayout>
       <Styled.NormalSign>
-        <SignTitle page="signup" />
+        <SignHeader page="signup" />
         <Form
           onSubmit={(data) => {
             mutate({ email: data.email, password: data.password });
